@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Zattera Machado - Ídolos do Flamengo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS interno: três elementos diferentes. -->
+    <style>
+        #gabriel_subtitulo {
+            font-size: 18px;
+        }
+
+        #gabriel_aviso {
+            font-size: 12px;
+        }
+
+        #gabriel_creditos {
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="gabriel_topo" id="gabriel_inicio">
+        <p class="gabriel_marca">NAÇÃO <span>RUBRO-NEGRA</span></p>
+    </header>
+
+    <nav class="gabriel_menu">
+        <ul>
+            <li><a href="#gabriel_inicio">Início</a></li>
+            <li><a href="#gabriel_idolos">Ídolos</a></li>
+            <li><a href="#gabriel_historia">História</a></li>
+            <li><a href="#gabriel_conquistas">Conquistas</a></li>
+            <li><a href="#gabriel_torcedor">Torcedor</a></li>
+        </ul>
+    </nav>
+
+    <main id="container">
+        <section class="gabriel_banner">
+            <div class="gabriel_chamada">
+                <!-- CSS inline. -->
+                <p class="gabriel_etiqueta" style="color: #ff8a98;">Cinco nomes. Uma paixão.</p>
+                <h1>ÍDOLOS<br>DE UMA<br><span>NAÇÃO.</span></h1>
+                <p id="gabriel_subtitulo">Talento, raça e momentos que ficaram na história do Flamengo.</p>
+                <a class="gabriel_linkBotao" href="#gabriel_idolos">Conheça os ídolos</a>
+            </div>
+            <img src="img/zico.jpg" alt="Zico com a camisa rubro-negra conduzindo a bola em campo.">
+        </section>
+
+        <!-- Grid -->
+        <div class="gabriel_layout">
+            <div>
+                <section class="gabriel_bloco" id="gabriel_idolos">
+                    <p class="gabriel_numero">01 / GALERIA DE ÍDOLOS</p>
+                    <h2>Quem veste o Manto fica na memória.</h2>
+                    <p class="gabriel_intro">Conheça cinco jogadores que marcaram diferentes gerações da torcida.</p>
+
+                    <div class="gabriel_galeria">
+                        <article class="gabriel_card">
+                            <img src="img/zico.jpg" alt="Zico em uma partida pelo Flamengo.">
+                            <div class="gabriel_cardTexto">
+                                <h3>Zico</h3>
+                                <p>O Galinho de Quintino. Técnica e cobranças de falta que encantaram a Nação.</p>
+                                <button class="gabriel_botao" type="button"
+                                    onclick="abrirModal('Zico', 'Arthur Antunes Coimbra é conhecido como o Galinho de Quintino. Participou das conquistas da Libertadores e do Mundial de 1981 pelo Flamengo.')">Saiba
+                                    mais</button>
+                            </div>
+                        </article>
+                        <article class="gabriel_card">
+                            <img src="img/arrascaeta.jpg"
+                                alt="Arrascaeta apontando em campo com o uniforme do Flamengo.">
+                            <div class="gabriel_cardTexto">
+                                <h3>Arrascaeta</h3>
+                                <p>Criatividade no meio-campo. O uruguaio faz do último passe uma arte.</p>
+                                <button class="gabriel_botao" type="button"
+                                    onclick="abrirModal('Arrascaeta', 'Giorgian de Arrascaeta chegou ao Flamengo em 2019. Sua visão de jogo e seus passes ajudaram a construir uma geração vitoriosa.')">Saiba
+                                    mais</button>
+                            </div>
+                        </article>
+                        <article class="gabriel_card">
+                            <img src="img/bruno-henrique.jpg"
+                                alt="Bruno Henrique segurando a taça da Libertadores de 2022.">
+                            <div class="gabriel_cardTexto">
+                                <h3>Bruno Henrique</h3>
+                                <p>Velocidade e presença no ataque. Um nome marcante da geração de 2019.</p>
+                                <button class="gabriel_botao" type="button"
+                                    onclick="abrirModal('Bruno Henrique', 'Bruno Henrique chegou ao Flamengo em 2019. Sua velocidade, impulsão e participação em jogos decisivos marcaram a trajetória do atacante no clube.')">Saiba
+                                    mais</button>
+                            </div>
+                        </article>
+                        <article class="gabriel_card">
+                            <img src="img/junior.jpg"
+                                alt="Júnior conduzindo a bola contra um jogador do Liverpool no Mundial de 1981.">
+                            <div class="gabriel_cardTexto">
+                                <h3>Júnior</h3>
+                                <p>O Maestro. Classe e liderança como lateral direito, lateral esquerdo e também no
+                                    meio-campo.</p>
+                                <button class="gabriel_botao" type="button"
+                                    onclick="abrirModal('Júnior', 'Leovegildo Lins da Gama Júnior ficou conhecido como Maestro. Foi campeão mundial em 1981 e uma liderança do Flamengo campeão brasileiro de 1992.')">Saiba
+                                    mais</button>
+                            </div>
+                        </article>
+                        <article class="gabriel_card">
+                            <img src="img/gabigol.jpg"
+                                alt="Gabigol com a bola em partida pelo Flamengo na Libertadores de 2022.">
+                            <div class="gabriel_cardTexto">
+                                <h3>Gabigol</h3>
+                                <p>Gols em decisões. Uma história ligada às Libertadores de 2019 e 2022.</p>
+                                <button class="gabriel_botao" type="button"
+                                    onclick="abrirModal('Gabigol', 'Gabriel Barbosa marcou os dois gols da virada contra o River Plate na final da Libertadores de 2019. Também fez o gol da vitória na decisão de 2022, contra o Athletico Paranaense.')">Saiba
+                                    mais</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="gabriel_bloco" id="gabriel_historia">
+                    <p class="gabriel_numero">02 / HISTÓRIA</p>
+                    <h2>Gerações de talento.</h2>
+                    <div class="gabriel_abas">
+                        <button id="gabriel_btnAba1" class="gabriel_ativo" type="button" onclick="mostrarAba(1)">O
+                            clube</button>
+                        <button id="gabriel_btnAba2" type="button" onclick="mostrarAba(2)">Zico</button>
+                        <button id="gabriel_btnAba3" type="button" onclick="mostrarAba(3)">Arrascaeta</button>
+                        <button id="gabriel_btnAba4" type="button" onclick="mostrarAba(4)">Bruno Henrique</button>
+                        <button id="gabriel_btnAba5" type="button" onclick="mostrarAba(5)">Júnior</button>
+                        <button id="gabriel_btnAba6" type="button" onclick="mostrarAba(6)">Gabigol</button>
+                    </div>
+                    <div id="gabriel_aba1" class="gabriel_conteudoAba gabriel_exibida">
+                        <h3>Do remo ao futebol</h3>
+                        <p>Fundado em 1895 como clube de remo, o Flamengo iniciou sua trajetória no futebol em 1912. O
+                            vermelho e o preto se tornaram símbolos de uma torcida apaixonada.</p>
+                    </div>
+                    <div id="gabriel_aba2" class="gabriel_conteudoAba">
+                        <h3>O Galinho de Quintino</h3>
+                        <p>Zico foi protagonista de uma geração histórica. Em 1981, o Flamengo conquistou a América e
+                            venceu o Liverpool por 3 a 0 no Mundial.</p>
+                    </div>
+                    <div id="gabriel_aba3" class="gabriel_conteudoAba">
+                        <h3>A criatividade uruguaia</h3>
+                        <p>Arrascaeta passou a vestir o Manto em 2019. Sua técnica no meio-campo ajudou o time a
+                            conquistar a Libertadores e o Brasileiro daquele ano.</p>
+                    </div>
+                    <div id="gabriel_aba4" class="gabriel_conteudoAba">
+                        <h3>Velocidade para decidir</h3>
+                        <p>Bruno Henrique foi um dos destaques do Flamengo na campanha de 2019. Suas arrancadas e seu
+                            jogo aéreo se tornaram marcas do atacante.</p>
+                    </div>
+                    <div id="gabriel_aba5" class="gabriel_conteudoAba">
+                        <h3>Um Maestro em campo</h3>
+                        <p>Júnior brilhou como lateral e meio-campista. Ligou duas gerações de conquistas: a equipe de
+                            1981 e o time campeão brasileiro de 1992.</p>
+                    </div>
+                    <div id="gabriel_aba6" class="gabriel_conteudoAba">
+                        <h3>O peso dos gols</h3>
+                        <p>Gabigol ficou na memória da torcida por decidir as finais da Libertadores de 2019 e 2022, com
+                            gols que garantiram os títulos.</p>
+                    </div>
+                </section>
+
+                <section class="gabriel_bloco" id="gabriel_conquistas">
+                    <p class="gabriel_numero">03 / CONQUISTAS</p>
+                    <h2>Seis capítulos inesquecíveis.</h2>
+                    <div class="gabriel_tabelaArea">
+                        <!-- Tabela 7×5 -->
+                        <table>
+                            <caption>Uma seleção de conquistas históricas do Flamengo.</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ano</th>
+                                    <th scope="col">Competição</th>
+                                    <th scope="col">Adversário na decisão</th>
+                                    <th scope="col">Destaque</th>
+                                    <th scope="col">Alcance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1981</th>
+                                    <td>Libertadores</td>
+                                    <td>Cobreloa</td>
+                                    <td>Zico</td>
+                                    <td>Continental</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1981</th>
+                                    <td>Mundial</td>
+                                    <td>Liverpool</td>
+                                    <td>Zico e Júnior</td>
+                                    <td>Mundial</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1992</th>
+                                    <td>Brasileiro</td>
+                                    <td>Botafogo</td>
+                                    <td>Júnior</td>
+                                    <td>Nacional</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2019</th>
+                                    <td>Libertadores</td>
+                                    <td>River Plate</td>
+                                    <td>Gabigol</td>
+                                    <td>Continental</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2022</th>
+                                    <td>Libertadores</td>
+                                    <td>Athletico-PR</td>
+                                    <td>Gabigol</td>
+                                    <td>Continental</td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">Conquistas selecionadas até 2022.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="gabriel_bloco" id="gabriel_duvidas">
+                    <p class="gabriel_numero">04 / CURIOSIDADES</p>
+                    <h2>Você conhece essa história?</h2>
+                    <p class="gabriel_intro">Clique em cada pergunta para abrir ou fechar a resposta.</p>
+                    <button class="gabriel_pergunta" type="button" onclick="alternarPergunta(1)">+ Quem é o Galinho de
+                        Quintino?</button>
+                    <p id="gabriel_resposta1" class="gabriel_resposta">É Zico, um dos maiores símbolos da história do
+                        Flamengo.</p>
+                    <button class="gabriel_pergunta" type="button" onclick="alternarPergunta(2)">+ Qual é a
+                        nacionalidade de Arrascaeta?</button>
+                    <p id="gabriel_resposta2" class="gabriel_resposta">Arrascaeta é uruguaio.</p>
+                    <button class="gabriel_pergunta" type="button" onclick="alternarPergunta(3)">+ Quando Bruno Henrique
+                        chegou ao clube?</button>
+                    <p id="gabriel_resposta3" class="gabriel_resposta">O atacante chegou ao Flamengo em 2019.</p>
+                    <button class="gabriel_pergunta" type="button" onclick="alternarPergunta(4)">+ Qual jogador ficou
+                        conhecido como Maestro?</button>
+                    <p id="gabriel_resposta4" class="gabriel_resposta">Júnior, que atuou como lateral e meio-campista.
+                    </p>
+                    <button class="gabriel_pergunta" type="button" onclick="alternarPergunta(5)">+ Quem fez os gols da
+                        final da Libertadores de 2019?</button>
+                    <p id="gabriel_resposta5" class="gabriel_resposta">Gabigol fez os dois gols do Flamengo na vitória
+                        por 2 a 1 contra o River Plate.</p>
+                    <button class="gabriel_pergunta" type="button" onclick="alternarPergunta(6)">+ Qual foi o resultado
+                        do Mundial de 1981?</button>
+                    <p id="gabriel_resposta6" class="gabriel_resposta">O Flamengo venceu o Liverpool por 3 a 0, com dois
+                        gols de Nunes e um de Adílio.</p>
+                </section>
+
+                <section class="gabriel_bloco" id="gabriel_torcedor">
+                    <p class="gabriel_numero">05 / ESPAÇO DO TORCEDOR</p>
+                    <h2>Qual ídolo marcou você?</h2>
+                    <p class="gabriel_intro">Formulário do torcedor</p>
+                    <form id="gabriel_formulario">
+                        <fieldset>
+                            <legend>Seu perfil</legend>
+                            <div class="gabriel_campo"><label for="gabriel_nome">Nome</label><input type="text"
+                                    id="gabriel_nome" name="nome"></div>
+                            <div class="gabriel_campo"><label for="gabriel_idade">Idade</label><input type="number"
+                                    id="gabriel_idade" name="idade" min="1" max="120" step="1"></div>
+                            <div class="gabriel_campo"><label for="gabriel_cidade">Cidade</label><input type="text"
+                                    id="gabriel_cidade" name="cidade"></div>
+                            <div class="gabriel_campo"><label for="gabriel_idolo">Ídolo favorito</label><select
+                                    id="gabriel_idolo" name="idolo">
+                                    <option value="">Selecione</option>
+                                    <option value="Zico">Zico</option>
+                                    <option value="Arrascaeta">Arrascaeta</option>
+                                    <option value="Bruno Henrique">Bruno Henrique</option>
+                                    <option value="Júnior">Júnior</option>
+                                    <option value="Gabigol">Gabigol</option>
+                                </select></div>
+                            <div class="gabriel_campo"><label for="gabriel_senha">Senha (mínimo de 6
+                                    caracteres)</label><input type="password" id="gabriel_senha" name="senha"></div>
+                            <div class="gabriel_campo"><label for="gabriel_confirma">Confirme a senha
+                                    </label><input type="password" id="gabriel_confirma" name="confirma"></div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Sua torcida (opcional)</legend>
+                            <p>Como costuma acompanhar o Flamengo?</p>
+                            <input type="radio" id="gabriel_tv" name="acompanha" value="tv" checked><label
+                                for="gabriel_tv">TV</label>
+                            <input type="radio" id="gabriel_estadio" name="acompanha" value="estadio"><label
+                                for="gabriel_estadio">Estádio</label>
+                            <div class="gabriel_campo"><label for="gabriel_memoria">Conte uma lembrança</label><textarea
+                                    id="gabriel_memoria" name="memoria" rows="3"></textarea></div>
+                        </fieldset>
+                        <button class="gabriel_botao" type="button" onclick="validarCadastro()">Validar
+                            cadastro</button>
+                    </form>
+                    <p id="gabriel_mensagem" class="gabriel_mensagem" role="status"></p>
+                </section>
+            </div>
+
+            <aside class="gabriel_bloco gabriel_lateral">
+                <p class="gabriel_numero">DO SEU JEITO</p>
+                <h2>As cores da paixão.</h2>
+                <p>Escolha a cor de fundo do portal.</p>
+                <button type="button" onclick="trocarCor('#f2f0ec')">Areia</button>
+                <button type="button" onclick="trocarCor('#f5dfe2')">Rubro claro</button>
+                <button type="button" onclick="trocarCor('#e2e2e2')">Cinza</button>
+                <button type="button" onclick="trocarCor('#ffffff')">Branco</button>
+                <button class="gabriel_botao" id="gabriel_btnTema" type="button" onclick="alternarTema()">Modo
+                    escuro</button>
+                <div class="gabriel_linha">
+                    <h3>Uma camisa, muitas histórias.</h3>
+                    <p>Dos campos de 1981 às decisões da geração de 2019, o Manto une torcedores de todas as idades.</p>
+                    <!-- CSS inline. -->
+                    <p style="font-weight: bold;">Uma vez Flamengo, sempre Flamengo.</p>
+                </div>
+                <div class="gabriel_linha">
+                    <h3>Fontes de consulta</h3>
+                    <ul>
+                        <li><a href="https://www.flamengo.com.br/">Site oficial do Flamengo</a></li>
+                        <li><a href="https://www.zico.com.br/">Site oficial de Zico</a></li>
+                    </ul>
+                    <p id="gabriel_aviso">Projeto acadêmico e independente, sem vínculo oficial com o clube.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="gabriel_fundoModal">
+        <div class="gabriel_modal" role="dialog" aria-modal="true" aria-labelledby="gabriel_tituloModal">
+            <h2 id="gabriel_tituloModal">Ídolo</h2>
+            <p id="gabriel_textoModal"></p>
+            <button class="gabriel_botao" id="gabriel_fecharModal" type="button" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="gabriel_rodape">
+        <p id="gabriel_creditos">Gabriel Zattera Machado · Desenvolvimento Front End · 2026</p>
+        <p>Portal acadêmico sobre ídolos do Flamengo.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
